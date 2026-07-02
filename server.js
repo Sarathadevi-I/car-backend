@@ -12,6 +12,14 @@ const adminRoutes = require("./routes/adminroutes");
 
 const app = express();
 
+
+app.use(cors({
+  origin: [
+    'https://car-frontend-olqr.vercel.app',
+    'http://localhost:5173' // local dev ku
+  ],
+  credentials: true
+}));
 app.use(cors());
 app.use(express.json());
 
